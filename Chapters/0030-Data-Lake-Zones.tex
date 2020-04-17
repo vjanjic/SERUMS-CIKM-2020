@@ -1,0 +1,95 @@
+\section{Data Lake Zones}
+
+The healthcare research is persisted in a data lake.
+
+\section{Work-space Zone}
+
+The work space zone is the temporary or trenchant storage space in the data lake to assist the data processing data crawlers to store data results and then share it with other down-stream processing data crawlers.
+
+\section{Raw Zone}
+
+The raw zone is data lake zone that stores the source system data in its original source format. It does not hold any structure meta-data.
+
+The data crawlers that perform the data acquisition from the Covid-19 data sources stores their results into this zone for downstream processing.
+
+%%TW: data crawlers operate in the work-space and in the raw zone then? not clear since both section mention the storage of results
+
+
+We used the following data sources:
+\begin{itemize}
+    \item Time
+    We use a fix range start on 2019-12-01 until 2020-12-01 ensure we capture any of the data sources.
+    \item Person
+    We used a GDPR \cite{EU2017} compliance methods of creating the right distribution of persons without compromising the individual person rights.
+    %%data sets have general statistics of population and individuals behaviour.. no? or we are talking about serumers records (actual patient records/info)?
+    \item Object
+    As to the objects used in the data set we have only limited the objects to three objects called Covid-19, hospital bed and ICU Bed. This purely because we did not track or process the other objects like hospital beds, masks etc. %%not clear
+    \item Location
+    The location was one of the major part of our research as we wanted to understand how location and factors about that location impacted the Covid-19 pandemics evolution across the globe. Our location is stored as a latitude and longitude to the tenth decimal using the latitude and longitude projection called the World Geodetic System (WGS) 1984 coordinate system.
+    \item Event
+    The event is the second major part of our research as it tracks every event that happens within the Covid-19 ecosystem.
+    The following events are tracked:
+    \begin{itemize}
+        \item Patient Zero
+        \item Patient exposed to virus
+        \item Has Covid-19 virus
+        \item Person infects other person
+        \item Person in hospital bed
+        \item Person in ICU bed
+        \item Person died
+        \item Person recovers
+    \end{itemize}
+\end{itemize}
+
+\subsection{Active Data Sources}
+
+We used the following data sources for our paper:
+
+\begin{itemize}
+    \item Static List of the European countries (Valid Dec 2020)
+    \item Dynamic update from Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Structured Zone}
+
+The structured zone storage the results of the data crawlers that processes data via the retrieve super-step data crawlers.
+
+%% Hold data types, Field name made the same pre-possessing of data
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Curated Zone}
+%% Private publish - Next deliverable - Built offline
+%% When you ready publish
+This zone holds the end results of the data and information aggregation.
+
+The Curated zone storage the results of the data crawlers that processes data via the assess, transform, process, organise and report super-steps' data crawlers.
+
+This is the zone that holds the Covid-19 data vault, data warehouse and data marts
+
+%% data vault 2.0 format - Time-Person-Object-Location-Event Hub
+%% data vault => data warehouse (everything) => data marts (UK, USA)
+
+The use of a Rapid Information Factory can enable a hyper-personalised customer experience by analysing the data at a global level and at the lowest data-leave level by simply running the correct queries. That is the advantage of having a hyper-scale-able factory with hyper-personalised data processing.
+
+The processing in this zone is not impacting the active customers of the Covid-19 insights published as the processing is done offline in a pre-processing cluster that has the appropriate processing capability.
+
+Once the data is turned into business insights it is bulk copied (published) to the consumer and analytic zones. This ensures minimum disruption of the consumer and analytic adhoc processing.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Consumer Zone}
+%% Online to customer => publish <= hospital at data
+
+%% data marts as-is from Curated zone (copy) - business intelligence
+
+The consumer zone is the storage accessed by the front-office customers when running the pre-processed business intelligence and pre-trained data science models. The core deliverable for our Covid-19 processing is our graphs showing how the lack of timely data updates and retrospective changes to already published facts are showing an incomplete and incorrect view of the true business insights.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analytic Zone}
+
+%% data warehouse - Data science plus data analysis (bulk big queries)
+
+The analytic zone is the storage zone for any data required by further down-stream processing and becomes the source data for several other data science investigations. We will not include those as they are future research we will publish at later date.

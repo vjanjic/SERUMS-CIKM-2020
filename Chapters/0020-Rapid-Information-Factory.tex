@@ -1,0 +1,27 @@
+\section{Rapid Information Factory (RIF)}
+
+The SERUMS project use the \emph{Rapid Information Factory} to enforce an effective and efficient data wrangling processing for the various data formats.
+
+The Rapid Information Factory is a processing methodology that uses design concepts adopted out of the Production Economics' Manufacturing Production methodologies by adopting the three basic manufacturing concepts into data processing:
+
+make to stock (MTS)
+predictable demand
+
+Antonio Arreola-risa and Gregory A. DeCroix in \cite{Arreola-Risa1998} explain how effective balance between make-to-order (MTO) versus make-to-stock (MTS) for producing multiple heterogeneous products can be achieved in a shared manufacturing facility. The same principal translated via transferable learning into a data processing context. 
+
+\begin{itemize}
+    \item make to order (MTO) predictable demand for a product and then built upfront.
+    \item make-to-stock (MTS) allows customers to order products built to their specifications
+    \item make to assemble (MTA) hybrid of MTS and MTA in that companies stock basic parts based on demand predictions, but do not assemble them until customers place their order. 
+\end{itemize}
+
+\section{Rapid Information Engine}
+
+We used a Dask scheduler with 8 x Dual (64 core/128 threads per socket) AMD AEPYC 7552 Processors with 64 GB Ram and four Seagate IronWolf 110 Series 1.92TB SSD Drives clusters. This enabled us to have 1024 core/2048 treads 512 GB RAM and 60 TB disk space for data lake.
+
+The software used is Ubuntu with Charmed Kubernetes and MAAS (Metal-as-a-Service). The Dask clusters are then created on top of Kubernetes to ensure a flexible processing ecosystem.
+
+The workcells in the factory always setup as part of the programming blueprint.
+
+
+
