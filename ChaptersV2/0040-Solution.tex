@@ -1,0 +1,117 @@
+{\color{red}{VJ:
+Section 3 - Impact of Problems with Sharing Medical Information in Time of COVID-19: Here we elaborate what the problem is. This is a more detailed description of the problem, probably with more graphs.
+}}
+
+\section{Solution}
+
+\subsection{RIF Cluster}
+
+The cluster is a Multi-cloud Kubernetes on Ubuntu using Charmed Kubernetes 
+
+{\color{red}{AFV:
+Need some help here!!
+I suggest we use the SEPA papers fig 6 as a guide but I need Docker replaced with kubernetes
+The data processing should expand downwards into a secondary row of servers with following items.
+- Server 1 - RaptorQube for SERUMS
+- server 2 - Dask Scheduler server
+- Servers 3 - 51 - i.e 48 smaller dask workers
+}}
+
+\subsection{SERUMS to Raw Zone}
+
+{\color{red}{AFV:
+Need some help here!!
+I suggest we use the SEPA papers fig 2 and Fig 4 as a guide
+
+TW: figures uploaded on images;sepa-paper need remodeling then...- juanjo has the lucid chart files }
+
+}
+
+
+
+\subsection{Raw Zone to Structured Zone}
+
+The data sources is landed in the Covid-19 data lake's raw zone by a pull process with a custom Covid-19 specific Retrieve Data Crawler for each of the data sources.
+
+A plant is setup for each of the T-P-O-L-E data vault hubs by spawning work-cells with data crawlers to extract the meta-data required by the factory to process the Covid-19 data sources into the structured zone.
+
+The retieve data crawlers \cite{Vermeulen2018ret} support the acquisition and pre-processing of the data as data only. The data crawlers identifies data entities and adds meta-data to the blueprints to enable downstream efficiencies through co-operative discovery.
+
+The output agreement for the \emph{Retrieve Data Crawlers} was via \emph{human-in-the-loop} pinned to only generate comma-separated values (CSV) formatted files. This single intervention reduced the processing discovery phase of the system by {\color{red}{?? Get values}} %%.
+
+The Covid-19 RIF is using the blueprints for a Python/Kubernetes-Dask cluster to process the data. The team reports that a Scala/Spark/Kubernetes cluster was also tested but no significant improvements was achieved using functional programming over a procedural programming approach.
+
+The factory retrieves {\color{red}{??}} data sources.
+To achieve this we used:
+\begin{itemize}
+    \item 1 x RapidQube Engine (Shared over six super-steps)
+    \item 1 x Rapid Information Factory (RIF) (Shared over six super-steps)
+    \item 5 x Rapid Information Plants (RIP) (Time, Person, Object, Location, Event)
+    \item {\color{red}{??}} x Rapid Work-Cells (RWC)
+    \item {\color{red}{??}} x Data Crawlers (DC)
+\end{itemize}
+
+The total time to complete this super-step is: {\color{red}{??}}
+
+
+
+\subsection{Structured Zone to Curated Zone}
+
+{\color{red}{VJ:
+I don't really see where the model to predict the number of infections would fit into and this doesn't sound as a particular research novelty (unless we develop a better model than the existing ones, which would probably be impossible to prove). But if we go for some other angle, that could change things.}}
+
+{\color{red}{AFV:
+We need a basic virus spread prediction here to use as a theoretic compare to the reality of the data.
+
+TW: do we really need a model like this for this first paper? maybe some kind of visualisation of what you have compiled on data can already reveal some trends or contradictions published about spread and measures.
+
+Suggest a spread from Heathrow by 1 person on a day by day - post code by post code in UK
+
+If it works we test it on another country also.
+
+TW: did not find this info mentioned above (spread from Heathrow). Below two different approaches (1-traditional and 2-out of the box..)
+
+
+
+
+%The simplistic model -  WHO - analytical model based on differential equations to simulate the effects of the disease - SIR and SEIR (extended) framework. These models analyse rates of individuals being susceptible, infectious or recovered (immune), considering a population (N). SIR model delivers an indicator of the progression of the disease.
+
+%https://triplebyte.com/blog/modeling-infectious-diseases
+%https://www.scientificamerican.com/article/will-the-new-coronavirus-keep-spreading-or-not-you-have-to-know-one-little-number/
+
+
+%I found this recent model (no published paper..) maybe it only has github source code, but seems interesting, applied Kalman filter, considers regions, etc.:
+
+%https://towardsdatascience.com/using-kalman-filter-to-predict-corona-virus-spread-72d91b74cc8
+
+%TW: I have found inumerous attempts to model different covid issues, but not always found the maths or code to apply... Several blogs;websites discuss the inaccuracy of some models and worry about public reaction on models with predictive results - we need to be careful at this point
+}}
+
+The factory uses assess super-step \cite{Vermeulen2018ass} for {\color{red}{??}} data sources to enable data quality, data provenance and data linkage. The processing super-step \cite{Vermeulen2018prc} resolves the column matching of data sources into a T-P-O-L-E data vault. 
+
+Zhu, Deng, Nargesian, Fatemeh and Miller in 2019 \cite{zhu2019josie} shows how using a overlap set similarity search problem by considering columns as sets and matching values as intersection between sets. Their JOSIE (Joining Search using Intersection Estimation) algorithm was modified as a set of RIF blueprint for the Retrieve, Assess and Process Super-step to integrate and aggregate various data entities from disparate data sources.
+
+The Process \cite{Vermeulen2018prc}, Transform \cite{Vermeulen2018trf}, Organise \cite{Vermeulen2018org} and Report \cite{Vermeulen2018rep} super-steps builds a Covid-19 global data vault, global data warehouse, country specific data marts and country specific reports.
+
+To achieve this we used:
+\begin{itemize}
+    \item 1 x RapidQube Engine (Shared over six super-steps)
+    \item 1 x Rapid Information Factory (RIF) (Shared over six super-steps)
+    \item 5 x Rapid Information Plants (RIP) (Time, Person, Object, Location, Event)
+    \item {\color{red}{??}} x Rapid Work-Cells (RWC)
+    \item {\color{red}{??}} x Data Crawlers (DC)
+\end{itemize}
+
+The total time to complete this super-step is: {\color{red}{??}}
+
+
+\subsection{Curated Zone to Consumer Zone and Analytic Zone}
+
+The synchroniser data crawler ensures a successful synchronous in operation of the factory between the Curated Zone, Consumer Zone and Analytic Zone business insights to ensure the same data is available at the same time.
+
+In the current Covid-19 solutions this is a major point of critical failure as the downstream information distributor is clearly losing their synchronous in operation with the source systems as various corrections are published between days.
+
+\section{High Level Swim Lane of Solution}
+
+{\color{red}{AFV: Need a swimlane plus solution steps}}
+

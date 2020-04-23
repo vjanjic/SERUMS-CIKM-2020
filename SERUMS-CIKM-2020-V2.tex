@@ -1,0 +1,123 @@
+%\documentclass[acmsmall]{acmart}
+\documentclass[sigconf]{acmart}
+
+\usepackage{graphicx}
+\graphicspath{images/}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmcopyright}
+\copyrightyear{2020}
+\acmYear{2020}
+\acmDOI{10.1145/1122445.1122456}
+
+%%
+%% These commands are for a JOURNAL article.
+\acmJournal{JACM}
+\acmVolume{37}
+\acmNumber{4}
+\acmArticle{111}
+\acmMonth{8}
+
+\begin{document}
+
+%%TW: Titles suggestions depending on result/discussion chapter?:
+
+%\title{Leveraging healthcare data wrangling and data analytics in a pandemic era}
+
+%\title{The power of data warehousing and prediction models for uncovering multinational spread of infectious diseases}
+
+%\title{Towards data wrangling and analytics for preventive actions on new waves of Covid-19 pandemic}
+
+
+\title{Towards Solving the World}
+%29TH ACM INTERNATIONAL CONFERENCE ON INFORMATION AND KNOWLEDGE MANAGEMENT \\ Data and information acquisition and pre-processing \\ or Integration and aggregation}
+
+%% VJ: THIS NEEDS TO BE COMMENTED OUT AS IT IS DOUBLE-BLIND REVIEW PROCESS
+%% \author{Andreas Francois Vermeulen}
+%% \email{afv@st-andrews.ac.uk}
+%% \orcid{0000-0003-2225-6851}
+%% \authornotemark[1]
+
+%% \author{Juliana K\"uster Filipe Bowles}
+%% \email{jkfb@st-andrews.ac.uk}
+
+%% \author{Thais Webber}
+%% \email{tcwds@st-andrews.ac.uk}
+
+%% \author{Juan Mendoza Santana}
+%% \email{jjm20@st-andrews.ac.uk}
+
+%% \affiliation{%
+%%   \institution{University of St Andrews}
+%%   \streetaddress{Jack Cole Building, North Haugh}
+%%   \city{St Andrews}
+%%   \state{Scotland, United Kingdom}
+%%   \postcode{KY16 9SX}
+%% }
+
+%% \author{Vladimir Janjic}
+%% \email{VJanjic001@dundee.ac.uk}
+
+%% \affiliation{%
+%%   \institution{University of Dundee}
+%%   \streetaddress{Nethergate}
+%%   \city{Dundee}
+%%   \state{Scotland, United Kingdom}
+%%   \postcode{DD1 4HN}
+%% }
+
+
+%% \author{Euan Blackledge}
+%% \email{euan.blackledge@soprasteria.com}
+
+%% \affiliation{%
+%%   \institution{Sopra Steria}
+%%   \streetaddress{30 Queensferry Rd}
+%%   \city{Edinburgh}
+%%   \state{Scotland, United Kingdom}
+%%   \postcode{EH4 2HS}
+%% }
+
+%% \renewcommand{\shortauthors}{Vermeulen A.F, Bowles J.K.F, Vladimir V, Blackledge E, Webber T and Santana J.M}
+%% END OF AUTOR LIST
+
+\begin{abstract}
+  \input{Chapters/0000-abstract} 
+\end{abstract}
+
+
+\keywords{datasets, data processing, data lake, data warehouse, data wrangling, covid-19}
+%%TW: data warehouse design, data wrangling, data analytics, disease surveillance, covid-19
+
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\url{https://cikm2020.org/call-for-papers-full-and-short-research-papers/}
+
+\input{ChaptersV2/0010-Introduction}
+\input{ChaptersV2/0020-RIFandSERUMS}
+\input{ChaptersV2/0030-Impact-Problems}
+\input{ChaptersV2/0040-Solution}
+\input{ChaptersV2/0050-Experimental-Results}
+\input{ChaptersV2/0060-Related-Work}
+\input{ChaptersV2/0070-Conclusions}
+
+\bibliographystyle{splncs04}
+\bibliography{SERUMS-CIKM-2020}
+\end{document}
+\endinput
+%%
+%% End of file `sample-acmsmall.tex'.

@@ -1,0 +1,71 @@
+{\color{red}{VJ:
+Section 2 - Rapid Information Factory and SERUMS project: Here we describe what SERUMS is about and also describe RIF in some detail. This could be our background section, if RIF was described elsewhere in research publications.
+}}
+
+\section{Rapid Information Factory (RIF)}
+The Rapid Information Factory is a processing methodology that enable the rapid deployment of data engineering and data science artefacts against a set of external data sources.
+
+{\color{red}{AFV:
+AFV will place a summary of the RIF here.
+
+And will complete the base info on RIF and Data Lake
+}}
+
+The RIF consists of two primary components:
+
+\begin{itemize}
+    \item Data Lake
+    The data lake is a 
+    
+    The data lake is segregated into six processing zones (Work-space, Raw, Structured, Curated, Consumer and Analytic) 
+    The six zones performs the following:
+    \begin{itemize}
+        \item Work-space - Temporary and transient storage during data wrangling and pre-processing
+        \item Raw - Storage of federated sources systems' data as-is
+        \item Structured - Storage of classified data with meta data to support processing
+        \item Curated - Business Insights using T-P-O-L-E data vault, data warehouse and data marts
+        \item Consumer - Storage of final published business insights
+        \item Analytic - Storage of final published bulk data for further analyse by other systems
+    \end{itemize}
+    
+    The inner details and workings of the data lake is explained in detail by Andreas Vermeulen in 
+    
+    
+    \item R-A-P-T-O-R engine
+    The Retrieve-Assess-Process-Transform-Organise-Report (R-A-P-T-O-R) engine is a hyper-scale distributed processing engine that uses graph theory in the form of a Directed Acyclic Graph (DAG) to form \emph{blueprints} with data crawlers as nodes artefacts. The details of this discussed by Vermeulen in "" \cite{...}
+    
+    Christian Krause, Matthias Tichy, Holger Giese \cite{Krause2014} states "Complex queries and updates demand expressive high-level languages which can still be efficiently executed on these large-scale graphs.". we have taken the basic concept of graphs and expanded it to have active self-healing data crawlers that are managed by these large graphs as blueprints. The R-A-P-T-O-R pipeline is a six step Bulk Synchronous Parallel (BSP) model.
+    
+    Krause's 48 processing nodes with 8 cores has been upgraded to 48 processing nodes with 1024 cores/2048 treads 512 GB RAM using a kubernetes based Dask Cluster with RaptorQube (a weak AI engine) managing the processing for the Covid-19 solution. 
+    
+\end{itemize}
+
+The research for Covid-19 uses a NetworkX based blueprint format and dask scheduled python coded artefacts to process the Covid-19 source data and extract the research insights.
+
+\section{SERUMS}
+
+The SERUMS project is ...
+
+The SERUMS project enables a ...
+
+{\color{red}{AF:
+We need a SERUMS summary here!!
+}}
+
+
+
+
+\section{RIF plus SERUMS}
+
+The SERUMS now EU but planned global data privacy and information acquisition capability delivers the data into the Raw Zone for the RIF to process.
+
+The RIF processing capability supports the effective and efficient pre-processing via RIF data crawlers to ensure acquisition via retrieve super-step \cite{Vermeulen2018ret} , data quality via assess super-step \cite{Vermeulen2018ass}, data wrangling via process \cite{Vermeulen2018prc} and transform \cite{Vermeulen2018trf} super-steps, data privacy via organise and report super-steps.
+
+Our research shows the combination of SERUMS with using a RIF is a viable solution to handle the 3Vs (volume, variety, veracity and velocity) of the Covid-19 requirement to achieve value through near-real-time .
+
+\begin{itemize}
+    \item volume - 
+    \item variety - no data standard
+    \item veracity - data has error and invalid values
+    \item velocity - Healthcare (Covid-19) is a global 24 hours a day process
+\end{itemize}
